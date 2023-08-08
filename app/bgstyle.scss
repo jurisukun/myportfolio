@@ -1,0 +1,140 @@
+$cols: 12;
+$rows: 12;
+$bodySize: 100vw + (100 / $cols); // fullwidth, starting on the edges
+$dotSize: 1.75vw;
+$gutter: 3vw;
+$lineWeight: 2px;
+$speed: 2.5s;
+
+$bg: black;
+$fg: white;
+
+// body {
+//   margin: 0;
+//   background: $bg;
+//   color: $fg;
+//   overflow: hidden;
+// }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  //   top: 0;
+  //   left: 0;
+  width: $bodySize;
+  height: $bodySize;
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+}
+
+.square {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: $fg;
+    background: $fg;
+    border-radius: 4px;
+  }
+
+  &:before {
+    top: 0rem;
+    left: $dotSize/2 + $gutter/2;
+    width: calc(100% - #{$dotSize} - #{$gutter});
+    height: $lineWeight;
+    transform: translateY(-50%) rotate(0deg);
+    animation: lineYpulse $speed infinite alternate-reverse ease-in;
+  }
+
+  &:after {
+    top: $dotSize/2 + $gutter/2;
+    left: 0rem;
+    width: $lineWeight;
+    height: calc(100% - #{$dotSize} - #{$gutter});
+    transform: translateX(-50%) rotate(0deg);
+    animation: lineXpulse $speed infinite alternate-reverse ease-in;
+  }
+}
+
+.dot {
+  position: absolute;
+  width: $dotSize;
+  height: $dotSize;
+  background: $fg;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: dotPulse $speed infinite alternate ease-in;
+
+  &:last-child {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation-direction: alternate-reverse;
+  }
+}
+
+$centerRow: ceil($rows/2);
+$centerCol: ceil($cols/2);
+$interval: 1; // interval of delay
+
+@for $row from 0 through $rows {
+  $centerRowPower: ($centerRow - abs(($centerRow - $row))) / 4;
+  @for $i from 1 through $cols {
+    $index: $i + ($cols * $row);
+    $centerColPower: ($centerCol - abs(($centerCol - $i))) / 4;
+
+    .square:nth-child(#{$index}) {
+      &::before,
+      &::after,
+      .dot {
+        opacity: ($centerColPower + $centerRowPower) * 0.5;
+        animation-delay: ($centerColPower + $centerRowPower) * -0.5s;
+      }
+
+      // At each row completed...
+      @if $i%$cols == 0 {
+        // background: red; // debug purposes
+        //$interval: $interval + 1;
+      }
+    }
+  }
+}
+
+@keyframes dotPulse {
+  0%,
+  35% {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+  }
+  65%,
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+}
+
+@keyframes lineXpulse {
+  0%,
+  35% {
+    transform: translate3d(-50%, 0, 0) rotate(0deg);
+  }
+  65%,
+  100% {
+    transform: translate3d(-50%, 0, 0) rotate(90deg);
+  }
+}
+
+@keyframes lineYpulse {
+  0%,
+  35% {
+    transform: translate3d(0, -50%, 0) rotate(0deg);
+  }
+  65%,
+  100% {
+    transform: translate3d(0, -50%, 0) rotate(90deg);
+  }
+}

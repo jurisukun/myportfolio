@@ -1,11 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("/utils/Quantum.otf");
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --cols: 12;
+  --rows: 12;
+  --bodySize: 100vw + (100 / var(--cols));
+  --dotSize: 1.75vw;
+  --gutter: 3vw;
+  --lineWeight: 2px;
+  --speed: 2.5s;
+  --bg: black;
+  --fg: white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,13 +25,110 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Quantums";
+  src: url("/utils/Quantum.otf");
+}
+@layer components {
+  .burgerlist {
+    background-color: rgb(248, 248, 248);
+    margin-top: 5px;
+    padding: 3px;
+    margin-bottom: 5px;
+    width: 100%;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    text-align: center;
+  }
+  .listmenu {
+    /* background-color: #194a7a; */
+    border-radius: 5px;
+    padding: 3px;
+    width: 100px;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .listmenu:hover {
+    background-color: #fff;
+    color: #194a7a;
+    font-weight: bold;
+  }
+  .navbar {
+    background-color: #194a7a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .home {
+    background-color: #d1dbe4;
+    background-image: url("../public/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .name {
+      color: #9768d1;
+    }
+  }
+  .cvbutton {
+    flex-wrap: nowrap;
+
+    background-color: #194a7a;
+    border-color: #fff;
+    color: #194a7a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  .others {
+    border-color: #7593af;
+    color: #194a7a;
+  }
+
+  .aboutme {
+    background-image: linear-gradient(
+      to top,
+      #475395e3,
+      #479594,
+      #476f95,
+      #475395e3
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutbg {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/react.png");
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;*/
+    animation: rotate 30s infinite linear;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      /* transform: scale(1.5); */
+    }
+  }
+  .skills {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--bodySize);
+    height: var(--bodySize);
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+  } */
 }
