@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("/utils/Quantum.otf");
 
 :root {
   --foreground-rgb: 0, 0, 0;

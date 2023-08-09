@@ -21,7 +21,7 @@ function Homepage() {
             JULIUS NAVAL ABUCEJO
           </p>
         </h1>
-        <h2 className="text-center my-1">I'm a freelance Web Developer</h2>
+        <h2 className="text-center my-1">I am a freelance Web Developer</h2>
         <div className="flex mt-5 items-center justify-center gap-4 p-4">
           <button
             onClick={() => {
@@ -42,6 +42,7 @@ function Homepage() {
             src="/IMG_20230629_111756.jpg"
             width="150"
             height="150"
+            alt="profilepic"
             className="flex border-2 p-1 border-white aspect-square rounded-full self-center object-cover"
           />
         </div>

@@ -33,6 +33,7 @@ function AboutMe() {
     <div className="aboutme sm:m:0 relative py-10">
       <div className=" absolute z-[-1] w-full h-full overflow-hidden top-[-25%] sm:top-[0]">
         <Image
+          alt="reactbg"
           src="/react.png"
           layout="fill"
           objectFit="contain"
@@ -53,6 +54,7 @@ function AboutMe() {
               width="200"
               height="200"
               className="rounded-xl"
+              alt="profilepic"
             />
           </div>
         </div>
@@ -79,7 +81,10 @@ function AboutMe() {
           <div className="frontend skills flex sm:w-1/2  w-full rounded-md gap-3 p-3 flex-wrap justify-evenly">
             {frontend.map((skill, index) => {
               return (
-                <div className="flex flex-col w-24 rounded-md bg-slate-300 p-2 justify-center self-center items-center text-center">
+                <div
+                  key={index}
+                  className="flex flex-col w-24 rounded-md bg-slate-300 p-2 justify-center self-center items-center text-center"
+                >
                   <Image
                     src={frontimages[index] ?? "/HTML5.png"}
                     width="50"
@@ -95,7 +100,10 @@ function AboutMe() {
           <div className="backend skills flex sm:w-1/2  w-full rounded-md gap-3 p-3 flex-wrap justify-evenly">
             {backend.map((skill, index) => {
               return (
-                <div className="flex flex-col w-24 aspect-square rounded-md bg-slate-300 p-2 justify-center self-center items-center text-center">
+                <div
+                  key={index}
+                  className="flex flex-col w-24 aspect-square rounded-md bg-slate-300 p-2 justify-center self-center items-center text-center"
+                >
                   <Image
                     src={backimages[index] ?? "/HTML5.png"}
                     width="50"

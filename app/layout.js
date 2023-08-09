@@ -1,7 +1,7 @@
 import "./globals.css";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useState } from "react";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [burgermenu, setBurgermenu] = useState(false);
+  const burgermenu = false;
 
   return (
     <html lang="en">
@@ -38,12 +38,7 @@ export default function RootLayout({ children }) {
               </li>
               <li className="listmenu">Contacts</li>
             </ul>
-            <div
-              onClick={() => {
-                setBurgermenu((prev) => !prev);
-              }}
-              className=" sm:hidden flex items-end justify-end cursor-pointer"
-            >
+            <div className=" sm:hidden flex items-end justify-end cursor-pointer">
               <GiHamburgerMenu
                 color={"#fff"}
                 size={35}
