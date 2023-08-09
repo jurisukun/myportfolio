@@ -16,10 +16,10 @@ const averox = localFont({
   display: "swap",
 });
 
-export const metadata = {
-  title: "My Portfolio",
-  description: "Portfolio made with Next.js",
-};
+// export const metadata = {
+//   title: "My Portfolio",
+//   description: "Portfolio made with Next.js",
+// };
 
 export default function RootLayout({ children }) {
   const [burgermenu, setBurgermenu] = useState(false);
