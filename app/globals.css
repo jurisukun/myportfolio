@@ -38,21 +38,29 @@ body {
     margin-top: 5px;
     padding: 3px;
     margin-bottom: 5px;
+    height: 45px;
     width: 100%;
     border: 1px solid rgb(216, 216, 216);
     border-radius: 5px;
+    line-height: 40px;
     text-align: center;
   }
   .listmenu {
     /* background-color: #194a7a; */
     border-radius: 5px;
-    padding: 3px;
-    width: 100px;
+    padding: 8px;
+
     color: #fff;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+    h1 {
+      font-size: 1.2rem;
+      font-style: bold;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
   }
   .listmenu:hover {
     background-color: #fff;

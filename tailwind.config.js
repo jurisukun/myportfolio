@@ -13,6 +13,8 @@ module.exports = {
         quantums: ["var(--font-quantumfont)", ...fontFamily.sans],
         shary: ["var(--font-sharyfont)", ...fontFamily.sans],
         neurosmall: ["var(--font-neurosmall)", ...fontFamily.sans],
+        slant: ["var(--font-zeniq)", ...fontFamily.sans],
+        averox: ["var(--font-averox)", ...fontFamily.sans],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

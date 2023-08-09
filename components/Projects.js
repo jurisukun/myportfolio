@@ -9,7 +9,7 @@ function Projects() {
         <div className=" flex sm:flex-row flex-col border-2 m-3 items-center rounded-xl lg:p-8">
           <div className="sm:w-1/2 w-full justify-center items-center flex  ">
             <Image
-              src="/../public/express.png"
+              src="/express.png"
               alt="Project 1"
               width={"300"}
               height={"300"}
@@ -36,7 +36,7 @@ function Projects() {
           <div className=" flex sm:flex-row flex-col border-2 m-3 items-center rounded-xl lg:p-8">
             <div className="sm:w-1/2 w-full justify-center items-center flex  ">
               <Image
-                src="/../public/express.png"
+                src="/express.png"
                 alt="Project 1"
                 width={"300"}
                 height={"300"}
@@ -63,7 +63,7 @@ function Projects() {
             <div className=" flex sm:flex-row flex-col border-2 m-3 items-center rounded-xl lg:p-8">
               <div className="sm:w-1/2 w-full justify-center items-center flex  ">
                 <Image
-                  src="/../public/express.png"
+                  src="/express.png"
                   alt="Project 1"
                   width={"300"}
                   height={"300"}
