@@ -86,17 +86,29 @@ export default function RootLayout({ children }) {
             {burgermenu && (
               <motion.div className="left-[50%] absolute  z-10 w-1/2 bg-slate-100  mt-3 flex sm:hidden rounded-md shadow-md border-gray-300 border shadow-cyan-50 bg-opacity-50">
                 <motion.ul className="flex-col w-full m-2 flex  items-center justify-center">
-                  <motion.li whileHover={{ scale: 1.1 }} className="burgerlist">
-                    Home
+                  <motion.li
+                    className={`${averox.className} burgerlist font-bold tracking-[2px]`}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <motion.a href="#hero">Home</motion.a>
                   </motion.li>
-                  <motion.li whileHover={{ scale: 1.1 }} className="burgerlist">
-                    About Me
+                  <motion.li
+                    whileHover={{ scale: 1.1 }}
+                    className={`${averox.className} burgerlist font-bold  tracking-[2px]`}
+                  >
+                    <motion.a href="#aboutme">About Me</motion.a>
                   </motion.li>
-                  <motion.li whileHover={{ scale: 1.1 }} className="burgerlist">
-                    Projects
+                  <motion.li
+                    whileHover={{ scale: 1.1 }}
+                    className={`${averox.className} burgerlist font-bold tracking-[2px]`}
+                  >
+                    <motion.a href="#projects">Projects</motion.a>
                   </motion.li>
-                  <motion.li whileHover={{ scale: 1.1 }} className="burgerlist">
-                    Contacts
+                  <motion.li
+                    whileHover={{ scale: 1.1 }}
+                    className={`${averox.className} burgerlist font-bold tracking-[2px]`}
+                  >
+                    <motion.a href="#contacts">Contacts</motion.a>
                   </motion.li>
                 </motion.ul>
               </motion.div>
