@@ -39,7 +39,7 @@ body {
     padding: 3px;
     margin-bottom: 5px;
     height: 45px;
-    width: 100%;
+    width: 90%;
     border: 1px solid rgb(216, 216, 216);
     border-radius: 5px;
     line-height: 40px;
@@ -78,6 +78,18 @@ body {
     background-size: cover;
     .name {
       color: #9768d1;
+    }
+    .type {
+      animation: typing 1.5s steps(40) 1s 1 normal both;
+    }
+
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
     }
   }
   .cvbutton {
