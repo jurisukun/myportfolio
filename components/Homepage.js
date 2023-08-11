@@ -14,7 +14,7 @@ function Homepage() {
   return (
     <div
       id="hero"
-      className="home top-0 flex sm:flex-row flex-col-reverse p-4  w-full h-[800px]  relative overflow-hidden "
+      className="home top-0 flex sm:flex-row flex-col-reverse p-4  w-full h-[600px]  relative overflow-hidden "
     >
       <Background />
       <div className="sm:w-[60%] w-full flex items-center flex-col justify-center z-10">
@@ -27,7 +27,7 @@ function Homepage() {
               transition: { duration: 1 },
               steps: 40,
             }}
-            className={`${quantumfont.className}   lg:text-4xl md:text-3xl sm:text-2xl text-3xl text-center  text-white overflow-hidden whitespace-nowrap w-0`}
+            className={`${quantumfont.className}   lg:text-4xl md:text-3xl sm:text-2xl text-[25px] text-center  text-white overflow-hidden whitespace-nowrap w-0`}
           >
             JULIUS NAVAL ABUCEJO
           </motion.p>

@@ -9,7 +9,7 @@ export const sharyfont = localFont({
   display: "swap",
 });
 
-const nuerosmall = localFont({
+export const nuerosmall = localFont({
   src: "../fonts/neuropolitical/neuropolitical-rg-small.woff",
   display: "swap",
 });
@@ -44,7 +44,7 @@ function AboutMe() {
       </div>
 
       <motion.h1
-        initial={{ opacity: 0, x: -500 }}
+        initial={{ opacity: 0, x: -250 }}
         whileInView={{ opacity: 1, x: 0, transition: { duration: 1 } }}
         className={`${sharyfont.className} font-extrabold text-center text-3xl text-white mb-10 drop-shadow-2xl `}
       >
