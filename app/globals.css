@@ -70,6 +70,7 @@ body {
   .navbar {
     background-color: #194a7a;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
   }
   .home {
     background-color: #d1dbe4;
@@ -137,6 +138,56 @@ body {
   }
   .skills {
     background: rgba(255, 255, 255, 0.3);
+  }
+
+  .message {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    label {
+      width: 100px;
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      border: 1px solid #194a7a;
+      border-radius: 5px;
+      padding: 5px;
+      width: 100%;
+      min-height: 40px;
+      max-width: 200px;
+      height: 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #194a7a;
+    }
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 0;
+      label {
+        text-align: center;
+      }
+      input,
+      textarea {
+        max-height: 40px;
+        min-width: 30px;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .botsection {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .botsection.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
   }
 
   /* .container {

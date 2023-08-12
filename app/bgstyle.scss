@@ -67,6 +67,7 @@ $fg: white;
   width: $dotSize;
   height: $dotSize;
   background: $fg;
+
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: dotPulse $speed infinite alternate ease-in;

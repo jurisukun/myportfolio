@@ -6,7 +6,7 @@ function Contacts() {
   return (
     <div
       id="contacts"
-      className="aboutme p-8 min-h-[500px] h-auto flex flex-col "
+      className="aboutme p-8 min-h-[100vh] h-auto flex flex-col justify-center w-full"
     >
       <div className="">
         <h1
@@ -24,9 +24,7 @@ function Contacts() {
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
@@ -34,38 +32,51 @@ function Contacts() {
         <div className="flex flex-col sm:w-[60%] w-full sm:h-full h-[350px] items-center justify-center border-2 gap-8  rounded-xl ">
           <div>
             <h3 className={`${nuerosmall.className} text-yellow-400`}>
-              Kindly send me message
+              Send me a message
             </h3>
           </div>
 
-          <form className="flex flex-col gap-5">
-            <div className="flex gap-3">
-              <div className="flex flex-col w-1/4 items-start justify-start gap-10 ">
-                <label for="name" className="text-white font-semibold">
+          <form
+            className="flex flex-col gap-5"
+            onSubmit={(e) => {
+              e.preventDefault();
+              alert("ay wrong send");
+            }}
+          >
+            <div className="flex flex-col gap-3">
+              <div className="message">
+                <label htmlFor="name" className="text-white font-semibold">
                   Name
                 </label>
-                <label for="name" className="text-white font-semibold">
-                  Email
-                </label>
-                <label for="name" className="text-white font-semibold">
-                  Message
-                </label>
-              </div>
-              <div className="flex flex-col w-3/4 gap-10">
                 <input
                   type="text"
                   placeholder="Name"
                   className="p-1 rounded-sm"
                 />
+              </div>
+              <div className="message">
+                <label htmlFor="name" className="text-white font-semibold">
+                  Email
+                </label>
                 <input
                   type="email"
                   placeholder="Email"
                   className="p-1 rounded-sm"
                 />
+              </div>
+              <div className="message">
+                <label htmlFor="name" className="text-white font-semibold">
+                  Message
+                </label>
                 <textarea
                   placeholder="Message"
                   className="p-1 rounded-sm max-h-[100px]"
                 />
+              </div>
+              <div className="w-full flex justify-center mt-3">
+                <button className="bg-yellow-400 text-black font-semibold rounded-sm p-1 w-[100px] hover:bg-slate-100 hover:text-yellow-400 hover:border-yellow-400 ">
+                  Send
+                </button>
               </div>
             </div>
           </form>

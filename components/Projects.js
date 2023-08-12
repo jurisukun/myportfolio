@@ -35,7 +35,7 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="aboutme gap-3 p-5">
+    <div id="projects" className="aboutme gap-3 p-5 h-auto min-h-[100vh]">
       <motion.h1
         initial={{ opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 2 } }}
@@ -47,7 +47,7 @@ function Projects() {
         {projects.map((project, key) => (
           <motion.div
             key={key}
-            className=" flex sm:flex-row flex-col border-2 m-3 items-center sm:py-3 rounded-xl lg:p-8"
+            className=" flex sm:flex-row flex-col w-full border-2 m-3 items-center sm:py-3 rounded-xl lg:p-8"
             onClick={() => {
               setSelectedId(project.id);
             }}

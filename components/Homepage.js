@@ -14,7 +14,7 @@ function Homepage() {
   return (
     <div
       id="hero"
-      className="home top-0 flex sm:flex-row flex-col-reverse p-4  w-full h-[600px]  relative overflow-hidden "
+      className="home flex sm:flex-row flex-col-reverse p-4  w-full min-h-[100vh] h-auto relative overflow-hidden "
     >
       <Background />
       <div className="sm:w-[60%] w-full flex items-center flex-col justify-center z-10">
@@ -27,21 +27,30 @@ function Homepage() {
               transition: { duration: 1 },
               steps: 40,
             }}
-            className={`${quantumfont.className}   lg:text-4xl md:text-3xl sm:text-2xl text-[25px] text-center  text-white overflow-hidden whitespace-nowrap w-0`}
+            className={`${quantumfont.className}  2xl:text-6xl  xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-[25px] text-center  text-white overflow-hidden whitespace-nowrap w-0 `}
           >
             JULIUS NAVAL ABUCEJO
           </motion.p>
         </div>
 
-        <h2 className="text-center my-1">I am a freelance Web Developer</h2>
+        <h2 className="text-center text-[min(5vw,2rem)] text-yellow-400  my-2">
+          I am a freelance Web Developer
+        </h2>
+        <p className="text-[min(12vw,1.2rem)] text-center">
+          I am a freelance web developer. I am a graduate of Bachelor of Science
+          in Cavite State University- Don Severino de las Alas Campus
+        </p>
         <div className="flex mt-5 items-center justify-center gap-4 p-4">
           <button
-            onClick={() => {
-              alert("Maghintay ka di pa tapos");
-            }}
+            // onClick={() => {
+            //   alert("Maghintay ka di pa tapos");
+            // }}
             className="flex-nowrap whitespace-nowrap cvbutton border-2 text-white rounded-md p-2 "
           >
-            My Resume
+            <a download href={"/Abucejo_Julius_Resume.docx"}>
+              {" "}
+              My Resume
+            </a>
           </button>
           <button className="others border-2 bg-slate-100 rounded-md p-2 ">
             Others

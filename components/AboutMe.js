@@ -32,7 +32,10 @@ function AboutMe() {
     "/git.png",
   ];
   return (
-    <div id="aboutme" className="aboutme sm:m:0 relative py-10">
+    <div
+      id="aboutme"
+      className="flex flex-col justify-center aboutme sm:m:0 relative py-10 min-h-[100vh] h-auto"
+    >
       <div className=" absolute z-[-1] w-full h-full overflow-hidden top-[-25%] sm:top-[0]">
         <Image
           alt="reactbg"
@@ -50,7 +53,7 @@ function AboutMe() {
       >
         ABOUT ME
       </motion.h1>
-      <div className=" h-auto flex sm:flex-row flex-col-reverse justify-center   items-center sm:p-4 ">
+      <div className="  h-auto flex sm:flex-row flex-col-reverse justify-center   items-center sm:p-4 ">
         <div className="h-full sm:w-1/3 w-full">
           <motion.div
             initial={{ opacity: 0 }}
@@ -105,7 +108,7 @@ function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center flex-col p-3 sm:h-auto">
+      <div className=" flex justify-center flex-col p-3 sm:h-auto">
         <h1
           className={`${nuerosmall.className} self-center p-3 text-amber-400 text-xl text-center shadow-white`}
         >
