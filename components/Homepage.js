@@ -34,8 +34,8 @@ function Homepage() {
           <h1 className="text-[min(8vw,86px)] font-bold bg-gradient-to-b from-transparent to-[#00fbff] sm:to-[#194a7a] bg-clip-text text-transparent bg-blend-overlay tracking-wider ">
             Hello,
           </h1>
-          <p className="text-cyan-950 text-transparent tracking-wider text-2xl">
-            I am,
+          <p className="text-cyan-950 opacity-70 tracking-wider text-2xl">
+            I am
           </p>
           <motion.p
             initial={{ width: 0, borderRight: "2px solid white" }}
