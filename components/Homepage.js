@@ -5,6 +5,18 @@ import localFont from "next/font/local";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { motion, steps } from "framer-motion";
 import Background from "./BackgroundSq.js";
+import { Poppins } from "next/font/google";
+
+export const poppins = Poppins({
+  weight: "800",
+  subsets: ["latin"],
+});
+
+export const poppinslight = Poppins({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const quantumfont = localFont({
   src: "../fonts/Quantum.woff",
   display: "swap",
@@ -18,7 +30,13 @@ function Homepage() {
     >
       <Background />
       <div className="sm:w-[60%] w-full flex items-center flex-col justify-center z-10">
-        <div className={`grid  place-items-center   `}>
+        <div className={`${poppins.className} grid  place-items-center`}>
+          <h1 className="text-[min(8vw,86px)] font-bold bg-gradient-to-b from-transparent to-[#00fbff] sm:to-[#194a7a] bg-clip-text text-transparent bg-blend-overlay tracking-wider ">
+            Hello,
+          </h1>
+          <p className="text-cyan-950 text-transparent tracking-wider text-2xl">
+            I am,
+          </p>
           <motion.p
             initial={{ width: 0, borderRight: "2px solid white" }}
             whileInView={{
@@ -33,13 +51,13 @@ function Homepage() {
           </motion.p>
         </div>
 
-        <h2 className="text-center text-[min(5vw,2rem)] text-yellow-400  my-2">
-          I am a freelance Web Developer
+        <h2
+          className={`${poppinslight.className} text-center text-[min(4vw,1.6rem)] text-yellow-400  my-2 tracking-wide`}
+        >
+          a passsionate and driven Web Developer enthusiast. Feel free to look
+          around and know me better.
         </h2>
-        <p className="text-[min(12vw,1.2rem)] text-center">
-          I am a freelance web developer. I am a graduate of Bachelor of Science
-          in Cavite State University- Don Severino de las Alas Campus
-        </p>
+
         <div className="flex mt-5 items-center justify-center gap-4 p-4">
           <button
             // onClick={() => {
@@ -48,7 +66,6 @@ function Homepage() {
             className="flex-nowrap whitespace-nowrap cvbutton border-2 text-white rounded-md p-2 "
           >
             <a download href={"/Abucejo_Julius_Resume.docx"}>
-              {" "}
               My Resume
             </a>
           </button>

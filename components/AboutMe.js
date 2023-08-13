@@ -3,6 +3,13 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import { Exo_2 } from "next/font/google";
+import { Poppins } from "next/font/google";
+import { poppins } from "./Homepage";
+
+export const poppinslighter = Poppins({
+  weight: "200",
+  subsets: ["latin"],
+});
 
 export const sharyfont = localFont({
   src: "../fonts/SHARY-Bold.woff",
@@ -77,14 +84,14 @@ function AboutMe() {
             initial={{ scale: 0 }}
             whileInView={{
               scale: 1.6,
-              transition: { delay: 2, duration: 0.5 },
+              transition: { delay: 1, duration: 0.5 },
             }}
-            className="text-yellow-500"
+            className={`${poppins.className} text-yellow-500 tracking-wider`}
           >
             Julius N. Abucejo
           </motion.h1>
           <div className=" flex flex-col justify-center items center gap-8 sm:gap-3">
-            <motion.h4
+            {/* <motion.h4
               initial={{ scale: 0 }}
               whileInView={{
                 scale: 1.3,
@@ -93,18 +100,30 @@ function AboutMe() {
               className="self-center"
             >
               Web Developer
-            </motion.h4>
-            <motion.p
-              initial={{ opacity: 0, y: -100, scale: 0 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              className=" text-white text-justify"
+            </motion.h4> */}
+            <p
+              className={`${poppinslighter.className} text-white text-justify tracking-wide`}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatum, quibusdam, voluptates, quia voluptate quod quos
-              exercitationem voluptatibus quas quibusdam, voluptates, quia
-              voluptate quod quos exercitationem voluptatibus quas
-            </motion.p>
+              A dedicated web developer with a passion for creating dynamic web
+              solutions.
+            </p>
+            <p
+              className={`${poppinslighter.className} text-white text-justify tracking-wide`}
+            >
+              My voyage into the world of web development commenced on 2021 and
+              since then, I've been on an exciting ride of honing my skills in
+              HTML, CSS, JavaScript, React, Node.js , and Express.js. Armed with
+              a solid foundation in these technologies, I thrive on challenges
+              and am always eager to seek opportunities to enhance, innovate and
+              expand my horizons. I believe in the power of technology to shape
+              the digital landscape.
+            </p>
+            <p
+              className={`${poppinslighter.className} text-white text-justify tracking-wide`}
+            >
+              Let's connect and explore the boundless possibilities that lie
+              ahead
+            </p>
           </div>
         </div>
       </div>

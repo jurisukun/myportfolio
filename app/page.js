@@ -18,8 +18,8 @@ function Home() {
 
       <Contacts />
 
-      <div className="flex flex-row botsection w-[80%]  sticky bottom-16 h-[70px] z-[100]   items-center justify-center">
-        <motion.ul className="flex-row w-[90%] m-2 flex gap-3 items-center justify-center absolute">
+      <div className="flex flex-row botsection w-[85%]  sticky bottom-16 h-[70px] z-[100]   items-center justify-center bg-gradient-to-b from-[transparent] to-[#194a7a] px-3 rounded-xl">
+        <motion.ul className="flex-row w-[100%] m-2 flex gap-3 items-center justify-center  absolute p-5">
           <motion.li
             className={`${averox.className} burgerlist font-bold tracking-[2px]`}
             whileHover={{ scale: 1.1 }}

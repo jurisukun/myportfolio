@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        <div>{children}</div>
+        <div className="bg-[#475395e3]">{children}</div>
       </body>
     </html>
   );
