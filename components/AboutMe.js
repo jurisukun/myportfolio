@@ -111,7 +111,7 @@ function AboutMe() {
               className={`${poppinslighter.className} text-white text-justify tracking-wide`}
             >
               My voyage into the world of web development commenced on 2021 and
-              since then, I've been on an exciting ride of honing my skills in
+              since then, I have been on an exciting ride of honing my skills in
               HTML, CSS, JavaScript, React, Node.js , and Express.js. Armed with
               a solid foundation in these technologies, I thrive on challenges
               and am always eager to seek opportunities to enhance, innovate and
