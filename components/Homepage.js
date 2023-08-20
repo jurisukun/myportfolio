@@ -42,8 +42,7 @@ function Homepage() {
             whileInView={{
               width: "100%",
               borderRight: 0,
-              transition: { duration: 1 },
-              steps: 40,
+              transition: { duration: 2, ease: "linear", staggerChildren: 0.5 },
             }}
             className={`${quantumfont.className}  2xl:text-6xl  xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-[25px] text-center  text-white overflow-hidden whitespace-nowrap w-0 `}
           >

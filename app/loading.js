@@ -27,23 +27,23 @@ function Loading() {
         <div className="stack" style={{ "--stacks": 3 }}>
           <motion.span className="flex flex-row " style={{ "--index": 0 }}>
             <motion.h1
-              className={`${quantumfont.className} text-[max(10vw,4rem)] text-center font-extrabold`}
+              className={`${quantumfont.className} text-[max(10vw,3rem)] text-center font-extrabold`}
             >
-              {"< JNA />"}
+              {"<JNA/>"}
             </motion.h1>
           </motion.span>
           <motion.span className="flex flex-row" style={{ "--index": 1 }}>
             <motion.h1
-              className={`${quantumfont.className} text-[max(10vw,4rem)] text-center font-extrabold`}
+              className={`${quantumfont.className} text-[max(10vw,3rem)] text-center font-extrabold`}
             >
-              {"< JNA />"}
+              {"<JNA/>"}
             </motion.h1>
           </motion.span>
           <motion.span className="flex flex-row" style={{ "--index": 2 }}>
             <motion.h1
-              className={`${quantumfont.className} text-[max(10vw,4rem)] text-center font-extrabold`}
+              className={`${quantumfont.className} text-[max(10vw,3rem)] text-center font-extrabold`}
             >
-              {"< JNA />"}
+              {"<JNA/>"}
             </motion.h1>
           </motion.span>
         </div>

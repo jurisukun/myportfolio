@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-full w-full h-auto">
-        <div>{children}</div>
+        <main>{children}</main>
       </body>
     </html>
   );

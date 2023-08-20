@@ -5,7 +5,8 @@ import Projects from "@/components/Projects";
 import Contacts from "@/components/Contacts";
 import Nav from "@/components/Nav";
 import FloatingNav from "@/components/FloatingNav";
-import { Suspense, useState } from "react";
+import Footer from "@/components/Footer";
+import { useState } from "react";
 import Loading from "./loading";
 
 function Home() {
@@ -15,7 +16,7 @@ function Home() {
   }, 4000);
 
   return (
-    <div className="relative flex flex-col jusitfy-center items-center">
+    <div className="aboutme relative flex flex-col jusitfy-center items-center">
       {showSplash ? (
         <Loading />
       ) : (
@@ -25,6 +26,7 @@ function Home() {
           <AboutMe />
           <Projects />
           <Contacts />
+          <Footer />
           <FloatingNav />
         </>
       )}

@@ -63,15 +63,19 @@ function Contacts() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:w-[60%] w-full sm:h-full h-[350px] items-center justify-center border-2 gap-8  rounded-xl ">
+        <div className="flex flex-col sm:w-[60%] w-full sm:h-full min-h-[350px] h-auto py-4 items-center justify-center border-2 gap-8  rounded-xl ">
           <div>
             <h3 className={`${nuerosmall.className} text-yellow-400`}>
               Send me a message
             </h3>
           </div>
 
-          <form ref={form} className="flex flex-col gap-5" onSubmit={sendEmail}>
-            <div className="flex flex-col gap-3">
+          <form
+            ref={form}
+            className="flex flex-col gap-5 w-full justify-center items-center"
+            onSubmit={sendEmail}
+          >
+            <div className="flex flex-col gap-3 w-full justify-center items-center">
               <div className="message">
                 <label htmlFor="name" className="text-white font-semibold">
                   Name
