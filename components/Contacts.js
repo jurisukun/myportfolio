@@ -1,12 +1,46 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { sharyfont } from "./AboutMe";
 import { nuerosmall } from "./AboutMe";
+
 function Contacts() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (
+      e.target[0].value.trim() === "" ||
+      e.target[1].value.trim() === "" ||
+      e.target[2].value.trim() === ""
+    ) {
+      alert("Please fill up all the fields");
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_wjpz69t",
+        "template_qgz1sxq",
+        form.current,
+        "bQdUaIUqY-3kGVY3F"
+      )
+      .then(
+        (result) => {
+          alert("Message Sent, I'll get back to you shortly");
+          form.current.reset();
+          console.log(result.text);
+        },
+        (error) => {
+          alert("Failed to send email, Please try again");
+        }
+      );
+  };
+
   return (
     <div
       id="contacts"
-      className="aboutme p-8 min-h-[100vh] h-auto flex flex-col justify-center w-full"
+      className="aboutme p-8 min-h-[100vh] flex flex-col justify-center w-full"
     >
       <div className="">
         <h1
@@ -36,13 +70,7 @@ function Contacts() {
             </h3>
           </div>
 
-          <form
-            className="flex flex-col gap-5"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("ay wrong send");
-            }}
-          >
+          <form ref={form} className="flex flex-col gap-5" onSubmit={sendEmail}>
             <div className="flex flex-col gap-3">
               <div className="message">
                 <label htmlFor="name" className="text-white font-semibold">
@@ -52,6 +80,9 @@ function Contacts() {
                   type="text"
                   placeholder="Name"
                   className="p-1 rounded-sm"
+                  name="from_name"
+                  required
+                  id="name"
                 />
               </div>
               <div className="message">
@@ -62,6 +93,9 @@ function Contacts() {
                   type="email"
                   placeholder="Email"
                   className="p-1 rounded-sm"
+                  name="from_email"
+                  required
+                  id="from_email"
                 />
               </div>
               <div className="message">
@@ -70,11 +104,21 @@ function Contacts() {
                 </label>
                 <textarea
                   placeholder="Message"
-                  className="p-1 rounded-sm max-h-[100px]"
+                  className="p-1 rounded-sm sm:max-h-[100px]"
+                  name="message"
+                  required
+                  id="message"
                 />
               </div>
               <div className="w-full flex justify-center mt-3">
-                <button className="bg-yellow-400 text-black font-semibold rounded-sm p-1 w-[100px] hover:bg-slate-100 hover:text-yellow-400 hover:border-yellow-400 ">
+                <button
+                  type="submit"
+                  className="bg-yellow-400 text-black font-semibold rounded-sm p-1 w-[100px] hover:bg-slate-100 hover:text-yellow-400 hover:border-yellow-400 "
+                  required
+                  onClick={() => {
+                    console.log(form.current);
+                  }}
+                >
                   Send
                 </button>
               </div>

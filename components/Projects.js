@@ -35,11 +35,11 @@ function Projects() {
   ];
 
   return (
-    <div id="projects" className="aboutme gap-3 p-5 h-auto min-h-[100vh]">
+    <div id="projects" className="aboutme gap-3 p-5 py-10 min-h-[100vh]">
       <motion.h1
         initial={{ opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 2 } }}
-        className={`${sharyfont.className} font-extrabold text-center text-3xl sm:text-4xl text-white mb-10 drop-shadow-2xl `}
+        className={`${sharyfont.className} font-extrabold text-center text-3xl sm:text-4xl text-white mb-10 drop-shadow-2xl mt-10`}
       >
         Projects
       </motion.h1>

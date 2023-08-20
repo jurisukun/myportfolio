@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { motion, steps } from "framer-motion";
+import { motion } from "framer-motion";
 import Background from "./BackgroundSq.js";
 import { Poppins } from "next/font/google";
 
@@ -17,7 +17,7 @@ export const poppinslight = Poppins({
   subsets: ["latin"],
 });
 
-const quantumfont = localFont({
+export const quantumfont = localFont({
   src: "../fonts/Quantum.woff",
   display: "swap",
 });

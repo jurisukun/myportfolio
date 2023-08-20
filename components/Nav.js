@@ -24,25 +24,26 @@ function Nav() {
       onViewportEnter={(e) => {
         document.querySelector(".botsection").classList.remove("show");
       }}
-      className=" navbar relative p-4 flex z-50  items-center max-h-[300px] w-full "
+      className=" navbar relative p-4 flex z-50  items-center max-h-[100px] w-full "
     >
-      <div className="flex sm:flex-col flex-row gap-3 sm:w-[unset] w-full  items-center object-contain">
+      <div className="flex  flex-row gap-3 sm:w-[unset] w-full  items-center object-contain">
         <Image
           src="/mylogo2.png"
           alt="Logo"
           width={100}
           height={100}
-          className="rounded-full w-auto"
+          className="rounded-full aspect-square w-16"
         />
         <motion.h1
           className={
-            zeniq.className + ` text-yellow-400 text-xl whitespace-nowrap`
+            zeniq.className +
+            ` text-yellow-400 text-xl whitespace-nowrap md:flex hidden`
           }
         >
           My Portfolio
         </motion.h1>
       </div>
-      <div className="w-[90%] relative">
+      <div className="w-[90%] relative px-7">
         <ul
           className={`w-full  hidden sm:flex justify-center   whitespace-nowrap md:gap-[5%] sm:gap-0`}
         >
@@ -63,7 +64,7 @@ function Nav() {
           </li>
           <li className={`listmenu`}>
             <h1 className={averox.className}>
-              <a href="#contacts">Contacts</a>
+              <a href="#contacts">Contact</a>
             </h1>
           </li>
         </ul>
@@ -105,7 +106,7 @@ function Nav() {
                 whileHover={{ scale: 1.1 }}
                 className={`${averox.className} burgerlist font-bold tracking-[2px]`}
               >
-                <motion.a href="#contacts">Contacts</motion.a>
+                <motion.a href="#contacts">Contact</motion.a>
               </motion.li>
             </motion.ul>
           </motion.div>

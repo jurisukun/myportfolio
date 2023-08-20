@@ -1,6 +1,4 @@
 import "./globals.css";
-import Image from "next/image";
-import { Inter } from "next/font/google";
 
 export const metadata = {
   title: "My Portfolio",
@@ -10,8 +8,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>
-        <div className="bg-[#475395e3]">{children}</div>
+      <body className="min-h-full w-full h-auto">
+        <div>{children}</div>
       </body>
     </html>
   );
