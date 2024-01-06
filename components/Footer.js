@@ -12,16 +12,16 @@ export default function Footer() {
       }}
       className=" min-h-[100px] w-full navbar"
     >
-      <div className="w-full p-8 flex justify-center">
-        <div className="w-[15%] border-r-2 h-full justify-center items-center">
+      <div className="w-full p-8 flex flex-wrap justify-between">
+        <div className=" border-r-2 h-full px-3 justify-center items-center">
           <h1
             className={`${quantumfont.className} text-white text-xl text-center tracking-wide`}
           >
             JNA
           </h1>
         </div>
-        <div className="w-[85%] justify-center items-center flex flex-row">
-          <p className="text-center text-white">
+        <div className=" justify-center items-center flex flex-row">
+          <p className="text-center text-sm text-white">
             All rights reserve &copy; 2023
           </p>
         </div>

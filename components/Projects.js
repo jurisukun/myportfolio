@@ -10,13 +10,15 @@ function Projects() {
   const [selectedId, setSelectedId] = useState(null);
   const projects = [
     {
-      id: 1,
-      title: "Construction Company Business Directory",
+      id: 0,
+      title: "Coords Converter",
       description:
-        "Business Directory for Construction Companies in Cavite. Displays the list of companies and their contact information. Built using HTML, CSS, JavaScript, jQuery, and JSON files.",
-      image: "/project1.png",
-      url: "https://jurisukun.github.io/Cavite-Construction-Companies/index.html",
+        "Simple web app that converts latitude and longitude coordinates into degrees, minutes and seconds. Built using Vite, Tailwind CSS and Node (Fastify) for backend.",
+      image: "/coords.png",
+      url: "https://assesment-coords-converter.vercel.app/",
+      date: "2023",
     },
+
     {
       id: 2,
       title: "Machine Inventory System",
@@ -24,6 +26,16 @@ function Projects() {
         "A system that manages the inventory of machines in a company. Built using HTML, CSS, JavaScript, jQuery, PHP, and MySQL.",
       image: "/asti.png",
       url: "https://machineinventorysystem.000webhostapp.com/",
+      date: "2022",
+    },
+    {
+      id: 1,
+      title: "Construction Company Business Directory",
+      description:
+        "Business Directory for Construction Companies in Cavite. Displays the list of companies and their contact information. Built using HTML, CSS, JavaScript, jQuery, and JSON files.",
+      image: "/project1.png",
+      url: "https://jurisukun.github.io/Cavite-Construction-Companies/index.html",
+      date: "2021",
     },
     {
       id: 3,
@@ -31,6 +43,7 @@ function Projects() {
       description:
         "A system that manages the events of school organizations. Organization accounts send event requests on specified date and the Admin account chooses whether to accept the requests or not. Built using PHP, CSS, JavaScript, jQuery, and MySQL.",
       image: "/dummy.jpg",
+      date: "2020",
     },
   ];
 
@@ -75,6 +88,10 @@ function Projects() {
               <p className=" text-justify text-white font-medium ">
                 {project.description}
               </p>
+              <div className="flex w-full items-start justify-start mt-2 gap-2">
+                <p className="text-green-400 font-medium">Date: </p>
+                <p className="text-slate-100 tracking-wide ">{project.date}</p>
+              </div>
             </div>
           </motion.div>
         ))}
