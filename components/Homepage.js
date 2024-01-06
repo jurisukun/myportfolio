@@ -100,7 +100,7 @@ function Homepage() {
               className="cursor-pointer aspect-square w-[max(30px,3vw)]"
             />
           </a>
-          <a href="https:www.github.com">
+          <a href="https://www.linkedin.com/in/julius-abucejo-754925283/">
             <FaLinkedin
               size={"100%"}
               color="#fff"
